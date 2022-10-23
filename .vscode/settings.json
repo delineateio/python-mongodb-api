@@ -1,0 +1,30 @@
+{
+    "cSpell.words": [
+        "Autobuild",
+        "autoupdate",
+        "azuretools",
+        "Brewfile",
+        "chdir",
+        "cmds",
+        "codeql",
+        "deps",
+        "devcontainer",
+        "doctoc",
+        "gomod",
+        "gopath",
+        "goroot",
+        "gruntfuggly",
+        "markdownlint",
+        "PTRACE",
+        "pyenv",
+        "seccomp",
+        "Taskfile",
+        "tfenv",
+        "tfrc",
+        "traefik",
+        "treetsidesoftware",
+        "tyriar",
+        "venv",
+        "virtualenv"
+    ]
+}
