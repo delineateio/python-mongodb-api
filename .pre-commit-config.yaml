@@ -1,5 +1,5 @@
 ci:
-    skip: [ggshield]
+    skip: [ggshield, pylint]
 
 repos:
 
