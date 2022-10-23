@@ -1,5 +1,5 @@
 ci:
-    skip: [ggshield, terraform-fmt, terraform-validate, circleci-config-validate]
+    skip: [ggshield]
 
 repos:
 
