@@ -10,6 +10,7 @@ tasks:
     desc: initialise local environment
     cmds:
       - task: local:up
+      - task: pip:install
       - task: pre-commit:init
 
   pre-commit:init:
@@ -18,3 +19,9 @@ tasks:
     cmds:
       - pre-commit autoupdate &>/dev/null &
       - pre-commit install &>/dev/null &
+
+  pip:install:
+    desc: installs required pip packages
+    silent: true
+    cmds:
+      - pip install -r .devcontainer/requirements.txt &>/dev/null &
