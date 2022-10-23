@@ -47,10 +47,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The repo description should be added here and describe at least:
+This repo shows a relatively realistic API implementation for a simple CRUD like API, that stores it's data in MongoDB.  It demonstrates a some more isoterical features of FastAPI.  In addition some 3rd party packages have been used to provide functionality that would likely be required in a production solution, specifically:
 
-* Purpose of the repo e.g. problem/opportunity statement
-* High level description of the overall approach/solution
+* [tenacity](https://github.com/jd/tenacity) is used to provide retry decorators for certain functions/methods
+* [dependency-injector](https://github.com/ets-labs/python-dependency-injector) was used for dependency injection to reduce coupling
 
 ## Built With
 
