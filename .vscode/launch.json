@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "customers-api",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": ["main:app","--reload",  "--app-dir", "${workspaceFolder}/dev/src", "--env-file", "${workspaceFolder}/dev/.env"],
+            "justMyCode": true
+        }
+    ]
+}

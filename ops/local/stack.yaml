@@ -10,11 +10,32 @@ secrets:
 
 services:
 
-# partition --------------------------------------------------------------------------
-
-  whoami:
-    image: traefik/whoami:v1.7.1
+  mongodb:
+    container_name: mongodb
+    image: mongo:6.0.2
     ports:
-      - 8080:80
+      - 27017:27017
+    volumes:
+       - /tmp/customers/mongodb:/etc/mongo
     networks:
       - local
+
+  # postgres:
+  #   container_name: postgres
+  #   image: postgres:15.0-alpine
+  #   ports:
+  #     - 5432:5432
+  #   environment:
+  #     - POSTGRES_HOST_AUTH_METHOD=trust
+  #   networks:
+  #     - local
+
+  # redis:
+  #   container_name: redis
+  #   image: redis:7.0.5-alpine3.16
+  #   ports:
+  #     - 6379:6379
+  #   volumes:
+  #     - /tmp/customers/redis:/data
+  #   networks:
+  #     - local

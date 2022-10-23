@@ -1,6 +1,4 @@
-.terraform/
-
+__pycache__
 *.env
-terraform.tfstate
 .DS_Store
 .dccache

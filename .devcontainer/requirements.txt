@@ -1,2 +1,8 @@
-pre-commit>=2.20.0,<3.0.0
-ggshield>=1.13.5, <2.0.0
+dependency-injector==4.40.0
+fastapi[all]==0.85.1
+loguru==0.6.0
+pgcli==3.5.0
+pymongo==4.3.2
+tenacity==8.1.0
+uvicorn[standard]==0.18.0
+pre-commit==2.20.0

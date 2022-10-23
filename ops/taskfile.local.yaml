@@ -9,4 +9,4 @@ tasks:
   down:
     desc: tears down the docker-compose stack
     cmds:
-      - docker-compose -f ops/local/stack.yaml down
+      - docker-compose -f ops/local/stack.yaml down --remove-orphans

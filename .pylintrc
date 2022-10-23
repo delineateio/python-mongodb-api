@@ -1,0 +1,5 @@
+[MASTER]
+extension-pkg-whitelist=pydantic,dependency_injector
+
+[MESSAGES CONTROL]
+disable=missing-module-docstring,missing-class-docstring,missing-function-docstring
