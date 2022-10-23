@@ -3,6 +3,7 @@ from data import (
     Repository,
 )
 
+
 class Container(containers.DeclarativeContainer):
     ### test ###
     wiring_config = containers.WiringConfiguration(modules=["endpoints"])

@@ -4,6 +4,7 @@ from pydantic import BaseModel, EmailStr, validator, root_validator
 from .phone_number import PhoneNumber
 from .relationship import Relationship
 
+
 class Customer(BaseModel):
     forename: str
     surname: str
@@ -13,14 +14,12 @@ class Customer(BaseModel):
     phone_numbers: List[PhoneNumber]
     relationships: List[Relationship] | None
 
-
     # pylint: disable=no-self-argument
-    @validator('handle')
+    @validator("handle")
     def check_handle_length(cls, data):
         if len(data) < 3:
-            raise ValueError('the customer handle must be greater than 3 chars')
+            raise ValueError("the customer handle must be greater than 3 chars")
         return data
-
 
     # pylint: disable=no-self-argument
     @root_validator(pre=True)
@@ -30,7 +29,6 @@ class Customer(BaseModel):
         if handle:
             data["handle"] = handle.lower()
         return data
-
 
     # pylint: disable=no-self-argument
     @root_validator(pre=True)

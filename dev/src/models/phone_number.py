@@ -1,6 +1,7 @@
 from enum import Enum
 from pydantic import BaseModel, Extra
 
+
 class PhoneNumberType(str, Enum):
     WORK = "work"
     MOBILE = "mobile"

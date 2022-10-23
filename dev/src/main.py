@@ -5,7 +5,7 @@ from fastapi.middleware.gzip import GZipMiddleware
 from data import (
     RepositoryNotConnected,
     RepositoryDuplicateKeyError,
-    RepositoryNotFoundError
+    RepositoryNotFoundError,
 )
 import endpoints
 
@@ -15,6 +15,7 @@ def create_app() -> FastAPI:
     application.add_middleware(GZipMiddleware, minimum_size=1000)
     application.include_router(endpoints.router)
     return application
+
 
 app = create_app()
 
@@ -26,6 +27,7 @@ async def add_process_time_header(request: Request, call_next):
     process_time = time.time() - start_time
     response.headers["X-Process-Time"] = str(process_time)
     return response
+
 
 # pylint: disable=unused-argument
 @app.exception_handler(RepositoryNotConnected)
@@ -43,6 +45,7 @@ async def not_found_handler(request: Request, exc: RepositoryNotFoundError):
         status_code=status.HTTP_404_NOT_FOUND,
         content={"message": "Entity was not found"},
     )
+
 
 # pylint: disable=unused-argument
 @app.exception_handler(RepositoryDuplicateKeyError)

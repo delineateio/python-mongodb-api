@@ -3,6 +3,20 @@ ci:
 
 repos:
 
+  -  repo: https://github.com/psf/black
+     rev: 22.10.0
+     hooks:
+      - id: black
+
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args: ["-rn", "-sn"]
+
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.32.2
     hooks:
@@ -34,17 +48,3 @@ repos:
         name: check yaml
       - id: check-json
         name: check json
-
-  - repo: https://github.com/syntaqx/git-hooks
-    rev: v0.0.17
-    hooks:
-    - id: circleci-config-validate
-      name: circleci validation
-
-  - repo: https://github.com/gruntwork-io/pre-commit
-    rev: v0.1.17
-    hooks:
-      - id: terraform-fmt
-        name: terraform linting
-      - id: terraform-validate
-        name: terraform validation
