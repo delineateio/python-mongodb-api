@@ -2,7 +2,7 @@ dependency-injector==4.40.0
 fastapi[all]==0.87.0
 loguru==0.6.0
 pgcli==3.5.0
-pymongo==4.3.2
+pymongo==4.3.3
 tenacity==8.1.0
 uvicorn[standard]==0.18.3
 pre-commit==2.20.0
