@@ -1,5 +1,5 @@
 dependency-injector==4.41.0
-fastapi[all]==0.88.0
+fastapi[all]==0.89.1
 loguru==0.6.0
 pgcli==3.5.0
 pymongo==4.3.3
