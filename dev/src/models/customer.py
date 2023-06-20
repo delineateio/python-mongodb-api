@@ -24,7 +24,6 @@ class Customer(BaseModel):
     # pylint: disable=no-self-argument
     @root_validator(pre=True)
     def set_handle(cls, data):
-
         handle = data.get("handle")
         if handle:
             data["handle"] = handle.lower()
@@ -33,7 +32,6 @@ class Customer(BaseModel):
     # pylint: disable=no-self-argument
     @root_validator(pre=True)
     def set_email(cls, data):
-
         email = data.get("email")
         if email:
             data["email"] = email.lower()
