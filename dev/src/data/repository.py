@@ -36,7 +36,6 @@ class Repository:
         wait=wait_exponential(multiplier=0.1), stop=stop_after_attempt(3), reraise=True
     )
     def is_connected(self):
-
         try:
             self.client.server_info()
 
@@ -47,7 +46,6 @@ class Repository:
         wait=wait_exponential(multiplier=0.1), stop=stop_after_attempt(3), reraise=True
     )
     def startup(self) -> None:
-
         try:
             if self.collection_name not in self.database.list_collection_names():
                 collection = self.database.create_collection(self.collection_name)
@@ -66,7 +64,6 @@ class Repository:
         wait=wait_exponential(multiplier=0.1), stop=stop_after_attempt(3), reraise=True
     )
     def reset(self) -> None:
-
         try:
             self.database.items.delete_many({})
 
@@ -77,7 +74,6 @@ class Repository:
         wait=wait_exponential(multiplier=0.1), stop=stop_after_attempt(3), reraise=True
     )
     def get_customers(self) -> List[Customer]:
-
         customers = []
         for customer_info in self.database.items.find(
             {}, {"handle": 1, "forename": 1, "surname": 1, "email": 1}
@@ -92,7 +88,6 @@ class Repository:
         reraise=True,
     )
     def get_customer(self, handle: str) -> Customer:
-
         try:
             handle = handle.lower()
             customer = self.database.items.find_one({"handle": handle})
@@ -110,7 +105,6 @@ class Repository:
         reraise=True,
     )
     def create_customer(self, data: Any):
-
         try:
             self.database.items.insert_one(data)
 
