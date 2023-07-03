@@ -8,9 +8,6 @@
 			"NODE_VERSION": "lts/*"
 		}
 	},
-  "mounts": [
-		"source=${env:HOME}${env:USERPROFILE}/.devcontainer.env,target=/home/vscode/.devcontainer.env,type=bind,readonly"
-	],
 	"customizations": {
 		"vscode": {
 			"settings": {
@@ -32,7 +29,6 @@
 				"ms-python.python",
 				"ms-python.vscode-pylance",
 				"njpwerner.autodocstring",
-				"snyk-security.snyk-vulnerability-scanner",
 				"visualstudioexptteam.intellicode-api-usage-examples",
 				"visualstudioexptteam.vscode",
         "editorconfig.editorconfig",
@@ -48,7 +44,10 @@
 		},
 		"ghcr.io/devcontainers/features/github-cli:1": {
 			"version": "latest"
-		}
+		},
+    "ghcr.io/devcontainers-contrib/features/go-task:1": {
+        "version": "latest"
+    }
 	},
 	"remoteUser": "vscode"
 }
