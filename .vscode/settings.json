@@ -1,22 +1,33 @@
 {
     "cSpell.words": [
         "Autobuild",
+        "autodocstring",
+        "autopep",
         "autoupdate",
         "azuretools",
         "Brewfile",
         "chdir",
         "cmds",
         "codeql",
+        "contrib",
         "deps",
         "devcontainer",
+        "devcontainers",
         "doctoc",
         "gomod",
         "gopath",
         "goroot",
         "gruntfuggly",
+        "intellicode",
         "markdownlint",
+        "mypy",
+        "njpwerner",
         "PTRACE",
+        "pycodestyle",
+        "pydocstyle",
         "pyenv",
+        "pylance",
+        "pylint",
         "seccomp",
         "Taskfile",
         "tfenv",
@@ -25,6 +36,8 @@
         "treetsidesoftware",
         "tyriar",
         "venv",
-        "virtualenv"
+        "virtualenv",
+        "visualstudioexptteam",
+        "yapf"
     ]
 }

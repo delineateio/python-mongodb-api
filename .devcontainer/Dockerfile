@@ -11,11 +11,6 @@ RUN apt-get update && \
 
 COPY /.devcontainer/.bash_aliases /home/vscode/
 
-# go-task -------------------------------------------------------------------------
-
-RUN bash -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b $INSTALL_DIR
-RUN ln -sf $INSTALL_DIR/task /usr/bin/task
-
 # pip installs --------------------------------------------------------------------
 
 COPY /.devcontainer/requirements.txt /usr/
@@ -23,5 +18,4 @@ RUN pip install --upgrade pip && pip install --upgrade pip && pip install -r /us
 
 # init ---------------------------------------------------------------------------
 
-RUN echo "source /home/vscode/.devcontainer.env" | tee -a /home/vscode/.bashrc >> /home/vscode/.zshrc
 RUN echo "task init" | tee -a /home/vscode/.bashrc >> /home/vscode/.zshrc
