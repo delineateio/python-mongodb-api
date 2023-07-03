@@ -4,5 +4,5 @@ loguru==0.6.0
 pgcli==3.5.0
 pymongo==4.4.0
 tenacity==8.2.2
-uvicorn[standard]==0.20.0
+uvicorn[standard]==0.22.0
 pre-commit==3.3.3
