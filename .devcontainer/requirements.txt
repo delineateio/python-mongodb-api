@@ -3,6 +3,6 @@ fastapi[all]==0.101.1
 loguru==0.7.0
 pgcli==3.5.0
 pymongo==4.4.1
-tenacity==8.2.2
+tenacity==8.2.3
 uvicorn[standard]==0.23.2
 pre-commit==3.3.3
