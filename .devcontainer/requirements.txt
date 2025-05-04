@@ -6,4 +6,3 @@ pymongo==4.6.1
 tenacity==8.2.3
 uvicorn[standard]==0.29.0
 pre-commit==3.7.0
-
