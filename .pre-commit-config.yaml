@@ -30,7 +30,7 @@ repos:
         name: update toc
 
   - repo: https://github.com/gitguardian/ggshield
-    rev: v1.38.1
+    rev: v1.39.0
     hooks:
       - id: ggshield
         name: gitguardian scanning
